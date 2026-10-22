@@ -33,7 +33,8 @@ for (const id of SETS) {
   const dark = await get(`/en/cards?types=eq:Darkness&id=like:${id}-*`);
   const official = set.cardCount.official;
   const cards = dark
-    .filter((c) => Number(c.localId) <= official)
+    // Exact id match: "like:30th-*" also matches the 30th-c-* classic reprints.
+    .filter((c) => c.id === `${id}-${c.localId}` && Number(c.localId) <= official)
     .sort((a, b) => Number(a.localId) - Number(b.localId))
     .map((c) => ({
       id: c.id,
