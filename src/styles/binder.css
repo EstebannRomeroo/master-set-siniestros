@@ -174,13 +174,15 @@ main{max-width:1440px;margin:0 auto;padding:22px 20px 60px}
 
 /* ── Expansiones y progreso ───────────────────────────────── */
 .set+.set{margin-top:40px}
-.set-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:8px}
+.set-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:8px}
 .set-head h2{
   font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
   font-size:var(--step-3);margin:0;letter-spacing:-.01em;
 }
 .sleeve{margin-right:auto;font-size:var(--step-0);padding:2px 8px;border-radius:999px;border:1px dashed var(--ink-2);color:var(--ink-2)}
 .sleeve.owned{border:1px solid var(--accent);color:var(--accent)}
+.sleeve-card .thumb{display:block}
+.sleeve-card .thumb img{object-fit:contain;background:var(--surface-3)}
 .set-count{color:var(--ink-2);font-size:var(--step-1)}
 .set .bar{margin-bottom:16px}
 .bar{height:6px;border-radius:999px;background:var(--surface-3);overflow:hidden}
