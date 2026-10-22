@@ -1,0 +1,20 @@
+{
+  "name": "master-set-siniestros",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "test": "node --experimental-strip-types --test",
+    "tengo": "node scripts/tengo.mjs",
+    "catalog": "node scripts/fetch-catalog.mjs"
+  },
+  "dependencies": {
+    "astro": "^7.3.1"
+  }
+}

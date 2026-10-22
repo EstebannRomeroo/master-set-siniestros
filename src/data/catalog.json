@@ -1,0 +1,1028 @@
+[
+  {
+    "id": "sv08.5",
+    "name": "Evoluciones Prismáticas",
+    "official": 131,
+    "releaseDate": "2025-01-17",
+    "cards": [
+      {
+        "id": "sv08.5-059",
+        "num": "059",
+        "name": "Umbreon",
+        "img": "https://assets.tcgdex.net/en/sv/sv08.5/059/low.webp"
+      },
+      {
+        "id": "sv08.5-060",
+        "num": "060",
+        "name": "Umbreon ex",
+        "img": "https://assets.tcgdex.net/en/sv/sv08.5/060/low.webp"
+      },
+      {
+        "id": "sv08.5-061",
+        "num": "061",
+        "name": "Sneasel",
+        "img": "https://assets.tcgdex.net/en/sv/sv08.5/061/low.webp"
+      },
+      {
+        "id": "sv08.5-062",
+        "num": "062",
+        "name": "Houndour",
+        "img": "https://assets.tcgdex.net/en/sv/sv08.5/062/low.webp"
+      },
+      {
+        "id": "sv08.5-063",
+        "num": "063",
+        "name": "Houndoom",
+        "img": "https://assets.tcgdex.net/en/sv/sv08.5/063/low.webp"
+      },
+      {
+        "id": "sv08.5-064",
+        "num": "064",
+        "name": "Tyranitar ex",
+        "img": "https://assets.tcgdex.net/en/sv/sv08.5/064/low.webp"
+      },
+      {
+        "id": "sv08.5-065",
+        "num": "065",
+        "name": "Bramaluna",
+        "img": "https://assets.tcgdex.net/en/sv/sv08.5/065/low.webp"
+      }
+    ]
+  },
+  {
+    "id": "sv09",
+    "name": "Juntos de Aventuras",
+    "official": 159,
+    "releaseDate": "2025-03-28",
+    "cards": [
+      {
+        "id": "sv09-091",
+        "num": "091",
+        "name": "Koffing",
+        "img": "https://assets.tcgdex.net/en/sv/sv09/091/low.webp"
+      },
+      {
+        "id": "sv09-092",
+        "num": "092",
+        "name": "Weezing",
+        "img": "https://assets.tcgdex.net/en/sv/sv09/092/low.webp"
+      },
+      {
+        "id": "sv09-093",
+        "num": "093",
+        "name": "Wooper de Paldea",
+        "img": "https://assets.tcgdex.net/en/sv/sv09/093/low.webp"
+      },
+      {
+        "id": "sv09-094",
+        "num": "094",
+        "name": "Clodsire de Paldea ex",
+        "img": "https://assets.tcgdex.net/en/sv/sv09/094/low.webp"
+      },
+      {
+        "id": "sv09-095",
+        "num": "095",
+        "name": "Tyranitar",
+        "img": "https://assets.tcgdex.net/en/sv/sv09/095/low.webp"
+      },
+      {
+        "id": "sv09-096",
+        "num": "096",
+        "name": "Purrloin de N",
+        "img": "https://assets.tcgdex.net/en/sv/sv09/096/low.webp"
+      },
+      {
+        "id": "sv09-097",
+        "num": "097",
+        "name": "Zorua de N",
+        "img": "https://assets.tcgdex.net/en/sv/sv09/097/low.webp"
+      },
+      {
+        "id": "sv09-098",
+        "num": "098",
+        "name": "Zoroark ex de N",
+        "img": "https://assets.tcgdex.net/en/sv/sv09/098/low.webp"
+      },
+      {
+        "id": "sv09-099",
+        "num": "099",
+        "name": "Pangoro",
+        "img": "https://assets.tcgdex.net/en/sv/sv09/099/low.webp"
+      },
+      {
+        "id": "sv09-100",
+        "num": "100",
+        "name": "Lokix",
+        "img": "https://assets.tcgdex.net/en/sv/sv09/100/low.webp"
+      },
+      {
+        "id": "sv09-101",
+        "num": "101",
+        "name": "Bombirdier",
+        "img": "https://assets.tcgdex.net/en/sv/sv09/101/low.webp"
+      }
+    ]
+  },
+  {
+    "id": "sv10",
+    "name": "Rivales Predestinados",
+    "official": 182,
+    "releaseDate": "2025-05-30",
+    "cards": [
+      {
+        "id": "sv10-112",
+        "num": "112",
+        "name": "Ekans del Team Rocket",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/112/low.webp"
+      },
+      {
+        "id": "sv10-113",
+        "num": "113",
+        "name": "Arbok del Team Rocket",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/113/low.webp"
+      },
+      {
+        "id": "sv10-114",
+        "num": "114",
+        "name": "Nidoran♀ del Team Rocket",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/114/low.webp"
+      },
+      {
+        "id": "sv10-115",
+        "num": "115",
+        "name": "Nidorina del Team Rocket",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/115/low.webp"
+      },
+      {
+        "id": "sv10-116",
+        "num": "116",
+        "name": "Nidoqueen del Team Rocket",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/116/low.webp"
+      },
+      {
+        "id": "sv10-117",
+        "num": "117",
+        "name": "Nidoran♂ del Team Rocket",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/117/low.webp"
+      },
+      {
+        "id": "sv10-118",
+        "num": "118",
+        "name": "Nidorino del Team Rocket",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/118/low.webp"
+      },
+      {
+        "id": "sv10-119",
+        "num": "119",
+        "name": "Nidoking ex del Team Rocket",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/119/low.webp"
+      },
+      {
+        "id": "sv10-120",
+        "num": "120",
+        "name": "Zubat del Team Rocket",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/120/low.webp"
+      },
+      {
+        "id": "sv10-121",
+        "num": "121",
+        "name": "Golbat del Team Rocket",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/121/low.webp"
+      },
+      {
+        "id": "sv10-122",
+        "num": "122",
+        "name": "Crobat ex del Team Rocket",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/122/low.webp"
+      },
+      {
+        "id": "sv10-123",
+        "num": "123",
+        "name": "Grimer del Team Rocket",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/123/low.webp"
+      },
+      {
+        "id": "sv10-124",
+        "num": "124",
+        "name": "Muk del Team Rocket",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/124/low.webp"
+      },
+      {
+        "id": "sv10-125",
+        "num": "125",
+        "name": "Koffing del Team Rocket",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/125/low.webp"
+      },
+      {
+        "id": "sv10-126",
+        "num": "126",
+        "name": "Weezing del Team Rocket",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/126/low.webp"
+      },
+      {
+        "id": "sv10-127",
+        "num": "127",
+        "name": "Murkrow del Team Rocket",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/127/low.webp"
+      },
+      {
+        "id": "sv10-128",
+        "num": "128",
+        "name": "Sneasel del Team Rocket",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/128/low.webp"
+      },
+      {
+        "id": "sv10-129",
+        "num": "129",
+        "name": "Spiritomb de Cintia",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/129/low.webp"
+      },
+      {
+        "id": "sv10-130",
+        "num": "130",
+        "name": "Purrloin de Roxy",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/130/low.webp"
+      },
+      {
+        "id": "sv10-131",
+        "num": "131",
+        "name": "Liepard de Roxy",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/131/low.webp"
+      },
+      {
+        "id": "sv10-132",
+        "num": "132",
+        "name": "Scraggy de Roxy",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/132/low.webp"
+      },
+      {
+        "id": "sv10-133",
+        "num": "133",
+        "name": "Scrafty de Roxy",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/133/low.webp"
+      },
+      {
+        "id": "sv10-134",
+        "num": "134",
+        "name": "Impidimp de Roxy",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/134/low.webp"
+      },
+      {
+        "id": "sv10-135",
+        "num": "135",
+        "name": "Morgrem de Roxy",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/135/low.webp"
+      },
+      {
+        "id": "sv10-136",
+        "num": "136",
+        "name": "Grimmsnarl ex de Roxy",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/136/low.webp"
+      },
+      {
+        "id": "sv10-137",
+        "num": "137",
+        "name": "Morpeko de Roxy",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/137/low.webp"
+      },
+      {
+        "id": "sv10-138",
+        "num": "138",
+        "name": "Maschiff de Damián",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/138/low.webp"
+      },
+      {
+        "id": "sv10-139",
+        "num": "139",
+        "name": "Mabosstiff ex de Damián",
+        "img": "https://assets.tcgdex.net/en/sv/sv10/139/low.webp"
+      }
+    ]
+  },
+  {
+    "id": "sv10.5w",
+    "name": "Llama Blanca",
+    "official": 86,
+    "releaseDate": "2025-07-17",
+    "cards": [
+      {
+        "id": "sv10.5w-055",
+        "num": "055",
+        "name": "Purrloin",
+        "img": "https://assets.tcgdex.net/en/sv/sv10.5w/055/low.webp"
+      },
+      {
+        "id": "sv10.5w-056",
+        "num": "056",
+        "name": "Liepard",
+        "img": "https://assets.tcgdex.net/en/sv/sv10.5w/056/low.webp"
+      },
+      {
+        "id": "sv10.5w-057",
+        "num": "057",
+        "name": "Scraggy",
+        "img": "https://assets.tcgdex.net/en/sv/sv10.5w/057/low.webp"
+      },
+      {
+        "id": "sv10.5w-058",
+        "num": "058",
+        "name": "Scrafty",
+        "img": "https://assets.tcgdex.net/en/sv/sv10.5w/058/low.webp"
+      },
+      {
+        "id": "sv10.5w-059",
+        "num": "059",
+        "name": "Trubbish",
+        "img": "https://assets.tcgdex.net/en/sv/sv10.5w/059/low.webp"
+      },
+      {
+        "id": "sv10.5w-060",
+        "num": "060",
+        "name": "Garbodor",
+        "img": "https://assets.tcgdex.net/en/sv/sv10.5w/060/low.webp"
+      },
+      {
+        "id": "sv10.5w-061",
+        "num": "061",
+        "name": "Zorua",
+        "img": "https://assets.tcgdex.net/en/sv/sv10.5w/061/low.webp"
+      },
+      {
+        "id": "sv10.5w-062",
+        "num": "062",
+        "name": "Zoroark",
+        "img": "https://assets.tcgdex.net/en/sv/sv10.5w/062/low.webp"
+      },
+      {
+        "id": "sv10.5w-063",
+        "num": "063",
+        "name": "Vullaby",
+        "img": "https://assets.tcgdex.net/en/sv/sv10.5w/063/low.webp"
+      },
+      {
+        "id": "sv10.5w-064",
+        "num": "064",
+        "name": "Mandibuzz",
+        "img": "https://assets.tcgdex.net/en/sv/sv10.5w/064/low.webp"
+      },
+      {
+        "id": "sv10.5w-065",
+        "num": "065",
+        "name": "Deino",
+        "img": "https://assets.tcgdex.net/en/sv/sv10.5w/065/low.webp"
+      },
+      {
+        "id": "sv10.5w-066",
+        "num": "066",
+        "name": "Zweilous",
+        "img": "https://assets.tcgdex.net/en/sv/sv10.5w/066/low.webp"
+      },
+      {
+        "id": "sv10.5w-067",
+        "num": "067",
+        "name": "Hydreigon ex",
+        "img": "https://assets.tcgdex.net/en/sv/sv10.5w/067/low.webp"
+      }
+    ]
+  },
+  {
+    "id": "sv10.5b",
+    "name": "Fulgor Negro",
+    "official": 86,
+    "releaseDate": "2025-07-17",
+    "cards": [
+      {
+        "id": "sv10.5b-054",
+        "num": "054",
+        "name": "Venipede",
+        "img": "https://assets.tcgdex.net/en/sv/sv10.5b/054/low.webp"
+      },
+      {
+        "id": "sv10.5b-055",
+        "num": "055",
+        "name": "Whirlipede",
+        "img": "https://assets.tcgdex.net/en/sv/sv10.5b/055/low.webp"
+      },
+      {
+        "id": "sv10.5b-056",
+        "num": "056",
+        "name": "Scolipede",
+        "img": "https://assets.tcgdex.net/en/sv/sv10.5b/056/low.webp"
+      },
+      {
+        "id": "sv10.5b-057",
+        "num": "057",
+        "name": "Sandile",
+        "img": "https://assets.tcgdex.net/en/sv/sv10.5b/057/low.webp"
+      },
+      {
+        "id": "sv10.5b-058",
+        "num": "058",
+        "name": "Krokorok",
+        "img": "https://assets.tcgdex.net/en/sv/sv10.5b/058/low.webp"
+      },
+      {
+        "id": "sv10.5b-059",
+        "num": "059",
+        "name": "Krookodile",
+        "img": "https://assets.tcgdex.net/en/sv/sv10.5b/059/low.webp"
+      }
+    ]
+  },
+  {
+    "id": "me01",
+    "name": "Megaevolución",
+    "official": 132,
+    "releaseDate": "2025-09-26",
+    "cards": [
+      {
+        "id": "me01-085",
+        "num": "085",
+        "name": "Crawdaunt",
+        "img": "https://assets.tcgdex.net/en/me/me01/085/low.webp"
+      },
+      {
+        "id": "me01-086",
+        "num": "086",
+        "name": "Mega-Absol ex",
+        "img": "https://assets.tcgdex.net/en/me/me01/086/low.webp"
+      },
+      {
+        "id": "me01-087",
+        "num": "087",
+        "name": "Spiritomb",
+        "img": "https://assets.tcgdex.net/en/me/me01/087/low.webp"
+      },
+      {
+        "id": "me01-088",
+        "num": "088",
+        "name": "Yveltal",
+        "img": "https://assets.tcgdex.net/en/me/me01/088/low.webp"
+      },
+      {
+        "id": "me01-089",
+        "num": "089",
+        "name": "Nickit",
+        "img": "https://assets.tcgdex.net/en/me/me01/089/low.webp"
+      },
+      {
+        "id": "me01-090",
+        "num": "090",
+        "name": "Thievul",
+        "img": "https://assets.tcgdex.net/en/me/me01/090/low.webp"
+      },
+      {
+        "id": "me01-091",
+        "num": "091",
+        "name": "Shroodle",
+        "img": "https://assets.tcgdex.net/en/me/me01/091/low.webp"
+      },
+      {
+        "id": "me01-092",
+        "num": "092",
+        "name": "Grafaiai",
+        "img": "https://assets.tcgdex.net/en/me/me01/092/low.webp"
+      }
+    ]
+  },
+  {
+    "id": "me02",
+    "name": "Fuegos Fantasmales",
+    "official": 94,
+    "releaseDate": "2025-11-14",
+    "cards": [
+      {
+        "id": "me02-054",
+        "num": "054",
+        "name": "Gastly",
+        "img": "https://assets.tcgdex.net/en/me/me02/054/low.webp"
+      },
+      {
+        "id": "me02-055",
+        "num": "055",
+        "name": "Haunter",
+        "img": "https://assets.tcgdex.net/en/me/me02/055/low.webp"
+      },
+      {
+        "id": "me02-056",
+        "num": "056",
+        "name": "Mega-Gengar ex",
+        "img": "https://assets.tcgdex.net/en/me/me02/056/low.webp"
+      },
+      {
+        "id": "me02-057",
+        "num": "057",
+        "name": "Murkrow",
+        "img": "https://assets.tcgdex.net/en/me/me02/057/low.webp"
+      },
+      {
+        "id": "me02-058",
+        "num": "058",
+        "name": "Honchkrow",
+        "img": "https://assets.tcgdex.net/en/me/me02/058/low.webp"
+      },
+      {
+        "id": "me02-059",
+        "num": "059",
+        "name": "Sableye",
+        "img": "https://assets.tcgdex.net/en/me/me02/059/low.webp"
+      },
+      {
+        "id": "me02-060",
+        "num": "060",
+        "name": "Carvanha",
+        "img": "https://assets.tcgdex.net/en/me/me02/060/low.webp"
+      },
+      {
+        "id": "me02-061",
+        "num": "061",
+        "name": "Mega-Sharpedo ex",
+        "img": "https://assets.tcgdex.net/en/me/me02/061/low.webp"
+      },
+      {
+        "id": "me02-062",
+        "num": "062",
+        "name": "Seviper",
+        "img": "https://assets.tcgdex.net/en/me/me02/062/low.webp"
+      },
+      {
+        "id": "me02-063",
+        "num": "063",
+        "name": "Absol",
+        "img": "https://assets.tcgdex.net/en/me/me02/063/low.webp"
+      },
+      {
+        "id": "me02-064",
+        "num": "064",
+        "name": "Sandile",
+        "img": "https://assets.tcgdex.net/en/me/me02/064/low.webp"
+      },
+      {
+        "id": "me02-065",
+        "num": "065",
+        "name": "Krokorok",
+        "img": "https://assets.tcgdex.net/en/me/me02/065/low.webp"
+      },
+      {
+        "id": "me02-066",
+        "num": "066",
+        "name": "Krookodile",
+        "img": "https://assets.tcgdex.net/en/me/me02/066/low.webp"
+      },
+      {
+        "id": "me02-067",
+        "num": "067",
+        "name": "Toxel",
+        "img": "https://assets.tcgdex.net/en/me/me02/067/low.webp"
+      },
+      {
+        "id": "me02-068",
+        "num": "068",
+        "name": "Toxtricity",
+        "img": "https://assets.tcgdex.net/en/me/me02/068/low.webp"
+      },
+      {
+        "id": "me02-069",
+        "num": "069",
+        "name": "Eternatus",
+        "img": "https://assets.tcgdex.net/en/me/me02/069/low.webp"
+      }
+    ]
+  },
+  {
+    "id": "me02.5",
+    "name": "Héroes Ascendentes",
+    "official": 217,
+    "releaseDate": "2026-01-30",
+    "cards": [
+      {
+        "id": "me02.5-123",
+        "num": "123",
+        "name": "Gastly",
+        "img": "https://assets.tcgdex.net/en/me/me02.5/123/low.webp"
+      },
+      {
+        "id": "me02.5-124",
+        "num": "124",
+        "name": "Haunter",
+        "img": "https://assets.tcgdex.net/en/me/me02.5/124/low.webp"
+      },
+      {
+        "id": "me02.5-125",
+        "num": "125",
+        "name": "Mega-Gengar ex",
+        "img": "https://assets.tcgdex.net/en/me/me02.5/125/low.webp"
+      },
+      {
+        "id": "me02.5-126",
+        "num": "126",
+        "name": "Murkrow del Team Rocket",
+        "img": "https://assets.tcgdex.net/en/me/me02.5/126/low.webp"
+      },
+      {
+        "id": "me02.5-127",
+        "num": "127",
+        "name": "Honchkrow del Team Rocket",
+        "img": "https://assets.tcgdex.net/en/me/me02.5/127/low.webp"
+      },
+      {
+        "id": "me02.5-128",
+        "num": "128",
+        "name": "Poochyena",
+        "img": "https://assets.tcgdex.net/en/me/me02.5/128/low.webp"
+      },
+      {
+        "id": "me02.5-129",
+        "num": "129",
+        "name": "Mightyena",
+        "img": "https://assets.tcgdex.net/en/me/me02.5/129/low.webp"
+      },
+      {
+        "id": "me02.5-130",
+        "num": "130",
+        "name": "Zigzagoon de Galar",
+        "img": "https://assets.tcgdex.net/en/me/me02.5/130/low.webp"
+      },
+      {
+        "id": "me02.5-131",
+        "num": "131",
+        "name": "Linoone de Galar",
+        "img": "https://assets.tcgdex.net/en/me/me02.5/131/low.webp"
+      },
+      {
+        "id": "me02.5-132",
+        "num": "132",
+        "name": "Obstagoon de Galar",
+        "img": "https://assets.tcgdex.net/en/me/me02.5/132/low.webp"
+      },
+      {
+        "id": "me02.5-133",
+        "num": "133",
+        "name": "Spiritomb de Cintia",
+        "img": "https://assets.tcgdex.net/en/me/me02.5/133/low.webp"
+      },
+      {
+        "id": "me02.5-134",
+        "num": "134",
+        "name": "Scraggy",
+        "img": "https://assets.tcgdex.net/en/me/me02.5/134/low.webp"
+      },
+      {
+        "id": "me02.5-135",
+        "num": "135",
+        "name": "Mega-Scrafty ex",
+        "img": "https://assets.tcgdex.net/en/me/me02.5/135/low.webp"
+      },
+      {
+        "id": "me02.5-136",
+        "num": "136",
+        "name": "Zorua de N",
+        "img": "https://assets.tcgdex.net/en/me/me02.5/136/low.webp"
+      },
+      {
+        "id": "me02.5-137",
+        "num": "137",
+        "name": "Zoroark ex de N",
+        "img": "https://assets.tcgdex.net/en/me/me02.5/137/low.webp"
+      },
+      {
+        "id": "me02.5-138",
+        "num": "138",
+        "name": "Vullaby",
+        "img": "https://assets.tcgdex.net/en/me/me02.5/138/low.webp"
+      },
+      {
+        "id": "me02.5-139",
+        "num": "139",
+        "name": "Mandibuzz ex",
+        "img": "https://assets.tcgdex.net/en/me/me02.5/139/low.webp"
+      },
+      {
+        "id": "me02.5-140",
+        "num": "140",
+        "name": "Pangoro",
+        "img": "https://assets.tcgdex.net/en/me/me02.5/140/low.webp"
+      },
+      {
+        "id": "me02.5-141",
+        "num": "141",
+        "name": "Hoopa",
+        "img": "https://assets.tcgdex.net/en/me/me02.5/141/low.webp"
+      },
+      {
+        "id": "me02.5-142",
+        "num": "142",
+        "name": "Fezandipiti ex",
+        "img": "https://assets.tcgdex.net/en/me/me02.5/142/low.webp"
+      },
+      {
+        "id": "me02.5-143",
+        "num": "143",
+        "name": "Pecharunt",
+        "img": "https://assets.tcgdex.net/en/me/me02.5/143/low.webp"
+      }
+    ]
+  },
+  {
+    "id": "me03",
+    "name": "Equilibrio Perfecto",
+    "official": 88,
+    "releaseDate": "2026-03-27",
+    "cards": [
+      {
+        "id": "me03-048",
+        "num": "048",
+        "name": "Gastly",
+        "img": "https://assets.tcgdex.net/en/me/me03/048/low.webp"
+      },
+      {
+        "id": "me03-049",
+        "num": "049",
+        "name": "Haunter",
+        "img": "https://assets.tcgdex.net/en/me/me03/049/low.webp"
+      },
+      {
+        "id": "me03-050",
+        "num": "050",
+        "name": "Gengar",
+        "img": "https://assets.tcgdex.net/en/me/me03/050/low.webp"
+      },
+      {
+        "id": "me03-051",
+        "num": "051",
+        "name": "Skorupi",
+        "img": "https://assets.tcgdex.net/en/me/me03/051/low.webp"
+      },
+      {
+        "id": "me03-052",
+        "num": "052",
+        "name": "Drapion",
+        "img": "https://assets.tcgdex.net/en/me/me03/052/low.webp"
+      },
+      {
+        "id": "me03-053",
+        "num": "053",
+        "name": "Yveltal ex",
+        "img": "https://assets.tcgdex.net/en/me/me03/053/low.webp"
+      },
+      {
+        "id": "me03-054",
+        "num": "054",
+        "name": "Chien-Pao",
+        "img": "https://assets.tcgdex.net/en/me/me03/054/low.webp"
+      }
+    ]
+  },
+  {
+    "id": "me04",
+    "name": "Caos Creciente",
+    "official": 86,
+    "releaseDate": "2026-05-22",
+    "cards": [
+      {
+        "id": "me04-049",
+        "num": "049",
+        "name": "Zubat",
+        "img": "https://assets.tcgdex.net/en/me/me04/049/low.webp"
+      },
+      {
+        "id": "me04-050",
+        "num": "050",
+        "name": "Golbat",
+        "img": "https://assets.tcgdex.net/en/me/me04/050/low.webp"
+      },
+      {
+        "id": "me04-051",
+        "num": "051",
+        "name": "Crobat",
+        "img": "https://assets.tcgdex.net/en/me/me04/051/low.webp"
+      },
+      {
+        "id": "me04-052",
+        "num": "052",
+        "name": "Qwilfish",
+        "img": "https://assets.tcgdex.net/en/me/me04/052/low.webp"
+      },
+      {
+        "id": "me04-053",
+        "num": "053",
+        "name": "Stunky",
+        "img": "https://assets.tcgdex.net/en/me/me04/053/low.webp"
+      },
+      {
+        "id": "me04-054",
+        "num": "054",
+        "name": "Skuntank",
+        "img": "https://assets.tcgdex.net/en/me/me04/054/low.webp"
+      },
+      {
+        "id": "me04-055",
+        "num": "055",
+        "name": "Krookodile ex",
+        "img": "https://assets.tcgdex.net/en/me/me04/055/low.webp"
+      },
+      {
+        "id": "me04-056",
+        "num": "056",
+        "name": "Trubbish",
+        "img": "https://assets.tcgdex.net/en/me/me04/056/low.webp"
+      },
+      {
+        "id": "me04-057",
+        "num": "057",
+        "name": "Garbodor",
+        "img": "https://assets.tcgdex.net/en/me/me04/057/low.webp"
+      },
+      {
+        "id": "me04-058",
+        "num": "058",
+        "name": "Skrelp",
+        "img": "https://assets.tcgdex.net/en/me/me04/058/low.webp"
+      }
+    ]
+  },
+  {
+    "id": "me05",
+    "name": "Oscuridad Absoluta",
+    "official": 84,
+    "releaseDate": "2026-07-17",
+    "cards": [
+      {
+        "id": "me05-048",
+        "num": "048",
+        "name": "Mega-Darkrai ex",
+        "img": "https://assets.tcgdex.net/en/me/me05/048/low.webp"
+      },
+      {
+        "id": "me05-049",
+        "num": "049",
+        "name": "Vullaby",
+        "img": "https://assets.tcgdex.net/en/me/me05/049/low.webp"
+      },
+      {
+        "id": "me05-050",
+        "num": "050",
+        "name": "Mandibuzz",
+        "img": "https://assets.tcgdex.net/en/me/me05/050/low.webp"
+      },
+      {
+        "id": "me05-051",
+        "num": "051",
+        "name": "Inkay",
+        "img": "https://assets.tcgdex.net/en/me/me05/051/low.webp"
+      },
+      {
+        "id": "me05-052",
+        "num": "052",
+        "name": "Malamar",
+        "img": "https://assets.tcgdex.net/en/me/me05/052/low.webp"
+      },
+      {
+        "id": "me05-053",
+        "num": "053",
+        "name": "Nickit",
+        "img": "https://assets.tcgdex.net/en/me/me05/053/low.webp"
+      },
+      {
+        "id": "me05-054",
+        "num": "054",
+        "name": "Thievul",
+        "img": "https://assets.tcgdex.net/en/me/me05/054/low.webp"
+      },
+      {
+        "id": "me05-055",
+        "num": "055",
+        "name": "Morpeko ex",
+        "img": "https://assets.tcgdex.net/en/me/me05/055/low.webp"
+      },
+      {
+        "id": "me05-056",
+        "num": "056",
+        "name": "Zarude",
+        "img": "https://assets.tcgdex.net/en/me/me05/056/low.webp"
+      },
+      {
+        "id": "me05-057",
+        "num": "057",
+        "name": "Maschiff",
+        "img": "https://assets.tcgdex.net/en/me/me05/057/low.webp"
+      },
+      {
+        "id": "me05-058",
+        "num": "058",
+        "name": "Mabosstiff",
+        "img": "https://assets.tcgdex.net/en/me/me05/058/low.webp"
+      },
+      {
+        "id": "me05-059",
+        "num": "059",
+        "name": "Chi-Yu",
+        "img": "https://assets.tcgdex.net/en/me/me05/059/low.webp"
+      }
+    ]
+  },
+  {
+    "id": "30th",
+    "name": "Celebración 30.º Aniversario",
+    "official": 128,
+    "releaseDate": "2026-09-16",
+    "cards": [
+      {
+        "id": "30th-c-006",
+        "num": "006",
+        "name": "Dark Tyranitar",
+        "img": "undefined/low.webp"
+      },
+      {
+        "id": "30th-c-007",
+        "num": "007",
+        "name": "Sneasel",
+        "img": "undefined/low.webp"
+      },
+      {
+        "id": "30th-087",
+        "num": "087",
+        "name": "Nidoran♀",
+        "img": "https://assets.tcgdex.net/en/me/30th/087/low.webp"
+      },
+      {
+        "id": "30th-088",
+        "num": "088",
+        "name": "Nidorina",
+        "img": "https://assets.tcgdex.net/en/me/30th/088/low.webp"
+      },
+      {
+        "id": "30th-089",
+        "num": "089",
+        "name": "Meowth de Alola",
+        "img": "https://assets.tcgdex.net/en/me/30th/089/low.webp"
+      },
+      {
+        "id": "30th-090",
+        "num": "090",
+        "name": "Gengar ex",
+        "img": "https://assets.tcgdex.net/en/me/30th/090/low.webp"
+      },
+      {
+        "id": "30th-091",
+        "num": "091",
+        "name": "Umbreon",
+        "img": "https://assets.tcgdex.net/en/me/30th/091/low.webp"
+      },
+      {
+        "id": "30th-092",
+        "num": "092",
+        "name": "Umbreon ex",
+        "img": "https://assets.tcgdex.net/en/me/30th/092/low.webp"
+      },
+      {
+        "id": "30th-093",
+        "num": "093",
+        "name": "Murkrow",
+        "img": "https://assets.tcgdex.net/en/me/30th/093/low.webp"
+      },
+      {
+        "id": "30th-094",
+        "num": "094",
+        "name": "Scraggy",
+        "img": "https://assets.tcgdex.net/en/me/30th/094/low.webp"
+      },
+      {
+        "id": "30th-095",
+        "num": "095",
+        "name": "Zorua",
+        "img": "https://assets.tcgdex.net/en/me/30th/095/low.webp"
+      },
+      {
+        "id": "30th-096",
+        "num": "096",
+        "name": "Zoroark",
+        "img": "https://assets.tcgdex.net/en/me/30th/096/low.webp"
+      },
+      {
+        "id": "30th-097",
+        "num": "097",
+        "name": "Deino",
+        "img": "https://assets.tcgdex.net/en/me/30th/097/low.webp"
+      },
+      {
+        "id": "30th-098",
+        "num": "098",
+        "name": "Zweilous",
+        "img": "https://assets.tcgdex.net/en/me/30th/098/low.webp"
+      },
+      {
+        "id": "30th-099",
+        "num": "099",
+        "name": "Hydreigon",
+        "img": "https://assets.tcgdex.net/en/me/30th/099/low.webp"
+      },
+      {
+        "id": "30th-100",
+        "num": "100",
+        "name": "Yveltal",
+        "img": "https://assets.tcgdex.net/en/me/30th/100/low.webp"
+      }
+    ]
+  }
+]

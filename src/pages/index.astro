@@ -1,0 +1,95 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import catalogJson from "../data/catalog.json";
+import tengoJson from "../data/tengo.json";
+import { progress, type CardSet } from "../lib/progress";
+
+const catalog = catalogJson as CardSet[];
+const owned = new Set<string>(tengoJson as string[]);
+const all = progress(catalog.flatMap((s) => s.cards), owned);
+---
+
+<BaseLayout>
+  <header class="masthead">
+    <div class="masthead-in">
+      <div class="brand">
+        <p class="eyebrow">Pokémon TCG · Tipo Oscuridad</p>
+        <h1>Master set Siniestros</h1>
+      </div>
+      <div class="tally">
+        <div class="tally-item"><span class="tally-n mono">{all.owned}/{all.total}</span><span class="tally-l">Cartas</span></div>
+        <div class="tally-item"><span class="tally-n mono">{all.pct}%</span><span class="tally-l">Completado</span></div>
+      </div>
+      <div class="head-actions">
+        <button class="btn btn-icon" id="themeBtn" aria-label="Cambiar tema" title="Cambiar tema">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg>
+        </button>
+      </div>
+    </div>
+    <div class="bar bar-lg"><span style={`width:${all.pct}%`}></span></div>
+  </header>
+
+  <div class="controls">
+    <div class="controls-in">
+      <div class="searchrow">
+        <div class="search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+          <label class="sr" for="q">Buscar por nombre o número</label>
+          <input id="q" type="search" placeholder="Buscar por nombre o número…" autocomplete="off" spellcheck="false" />
+        </div>
+        <label class="sr" for="setSel">Expansión</label>
+        <select class="sort" id="setSel">
+          <option value="">Todas las expansiones</option>
+          {catalog.map((s) => <option value={s.id}>{s.name}</option>)}
+        </select>
+      </div>
+      <div class="filters" id="status">
+        <button class="chip" data-status="all" aria-pressed="true">Todas</button>
+        <button class="chip" data-status="missing" aria-pressed="false">Me faltan</button>
+        <button class="chip" data-status="owned" aria-pressed="false">Tengo</button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    {catalog.map((set) => {
+      const p = progress(set.cards, owned);
+      return (
+        <section class="set" data-set={set.id}>
+          <div class="set-head">
+            <h2>{set.name}</h2>
+            <span class="mono set-count">{p.owned}/{p.total}</span>
+          </div>
+          <div class="bar"><span style={`width:${p.pct}%`}></span></div>
+          <ul class="grid">
+            {set.cards.map((c) => {
+              const has = owned.has(c.id);
+              return (
+                <li class:list={["card", { owned: has }]} data-num={c.num} data-name={c.name} data-owned={has ? "1" : ""}>
+                  <div class="thumb">
+                    <img src={c.img} alt={`${c.name} #${c.num} — ${set.name}`} loading="lazy" width="245" height="342" />
+                    {has && <span class="check" aria-label="La tengo">✓</span>}
+                  </div>
+                  <div class="meta">
+                    <span class="code">#{c.num}/{set.official}</span>
+                    <span class="name">{c.name}</span>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      );
+    })}
+    <div class="empty" id="empty" hidden>
+      <h2>Sin resultados</h2>
+      <p>Prueba con otro nombre, número o quita algún filtro.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>Imágenes y datos: TCGdex · © Pokémon / Nintendo / Creatures / GAME FREAK</p>
+  </footer>
+
+  <script src="../scripts/checklist.ts"></script>
+</BaseLayout>
