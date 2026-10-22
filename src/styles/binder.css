@@ -249,3 +249,18 @@ footer a{color:var(--ink-2)}
 @media (prefers-reduced-motion: reduce){
   *,*::before,*::after{animation-duration:.01ms !important;transition-duration:.01ms !important}
 }
+
+/* PDF of missing cards: only the print list is printed. */
+.print-only { display: none; }
+@media print {
+  body { background: #fff; color: #000; }
+  body > :not(.print-only) { display: none !important; }
+  .print-only { display: block; font-size: 11pt; }
+  .print-only h1 { font-size: 16pt; margin: 0 0 4pt; }
+  .print-only h2 { font-size: 12pt; margin: 12pt 0 4pt; border-bottom: 1px solid #000; }
+  .print-only h2 span { font-weight: normal; }
+  .print-only ul { list-style: none; padding: 0; margin: 0; columns: 2; }
+  .print-only li { padding: 1pt 0; break-inside: avoid; }
+  .print-only li::before { content: "☐ "; }
+  .print-set { break-inside: avoid-page; }
+}

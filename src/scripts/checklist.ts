@@ -38,6 +38,8 @@ for (const chip of chips) {
   });
 }
 
+document.getElementById("pdfBtn")!.addEventListener("click", () => print());
+
 const root = document.documentElement;
 try {
   const saved = localStorage.getItem("binder-theme");

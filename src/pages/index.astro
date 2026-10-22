@@ -21,6 +21,7 @@ const all = progress(catalog.flatMap((s) => s.cards), owned);
         <div class="tally-item"><span class="tally-n mono">{all.pct}%</span><span class="tally-l">Completado</span></div>
       </div>
       <div class="head-actions">
+        <button class="btn" id="pdfBtn" title="Abre imprimir: elige «Guardar como PDF»">Descargar PDF de faltantes</button>
         <button class="btn btn-icon" id="themeBtn" aria-label="Cambiar tema" title="Cambiar tema">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path></svg>
         </button>
@@ -86,6 +87,23 @@ const all = progress(catalog.flatMap((s) => s.cards), owned);
       <p>Prueba con otro nombre, número o quita algún filtro.</p>
     </div>
   </main>
+
+  <!-- ponytail: print-only list + window.print(); browser "Save as PDF" does the rest, no PDF lib -->
+  <section class="print-only">
+    <h1>Faltantes — Master set Siniestros</h1>
+    <p>Me faltan {all.total - all.owned} de {all.total} cartas.</p>
+    {catalog.map((set) => {
+      const missing = set.cards.filter((c) => !owned.has(c.id));
+      return missing.length > 0 && (
+        <div class="print-set">
+          <h2>{set.name} <span>({missing.length})</span></h2>
+          <ul>
+            {missing.map((c) => <li><span class="mono">#{c.num}/{set.official}</span> {c.name}</li>)}
+          </ul>
+        </div>
+      );
+    })}
+  </section>
 
   <footer>
     <p>Imágenes y datos: TCGdex · © Pokémon / Nintendo / Creatures / GAME FREAK</p>
