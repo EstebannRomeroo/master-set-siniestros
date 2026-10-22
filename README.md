@@ -13,6 +13,7 @@ Oscuridad de Pokémon TCG: qué cartas tengo y cuáles me faltan, por expansión
 
 - `src/data/catalog.json` — catálogo generado desde TCGdex (no editar a mano).
 - `src/data/tengo.json` — ids de las cartas que tengo. Es la fuente de verdad.
+- `src/data/sleeves.json` — ids de los sets cuyo sleeve de ETB tengo (se edita a mano).
 
 ```sh
 npm run tengo -- sv08.5-059 sv10-112          # marcar como "la tengo"

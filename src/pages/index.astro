@@ -2,10 +2,13 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import catalogJson from "../data/catalog.json";
 import tengoJson from "../data/tengo.json";
+import sleevesJson from "../data/sleeves.json";
 import { progress, type CardSet } from "../lib/progress";
 
 const catalog = catalogJson as CardSet[];
 const owned = new Set<string>(tengoJson as string[]);
+// Set ids whose Elite Trainer Box sleeves I own.
+const sleeves = new Set<string>(sleevesJson as string[]);
 const all = progress(catalog.flatMap((s) => s.cards), owned);
 ---
 
@@ -19,6 +22,7 @@ const all = progress(catalog.flatMap((s) => s.cards), owned);
       <div class="tally">
         <div class="tally-item"><span class="tally-n mono">{all.owned}/{all.total}</span><span class="tally-l">Cartas</span></div>
         <div class="tally-item"><span class="tally-n mono">{all.pct}%</span><span class="tally-l">Completado</span></div>
+        <div class="tally-item"><span class="tally-n mono">{sleeves.size}/{catalog.length}</span><span class="tally-l">Sleeves ETB</span></div>
       </div>
       <div class="head-actions">
         <button class="btn" id="pdfBtn" title="Abre imprimir: elige «Guardar como PDF»">Descargar PDF de faltantes</button>
@@ -59,6 +63,7 @@ const all = progress(catalog.flatMap((s) => s.cards), owned);
         <section class="set" data-set={set.id}>
           <div class="set-head">
             <h2>{set.name}</h2>
+            <span class:list={["sleeve", { owned: sleeves.has(set.id) }]}>{sleeves.has(set.id) ? "✓ Sleeve ETB" : "Falta sleeve ETB"}</span>
             <span class="mono set-count">{p.owned}/{p.total}</span>
           </div>
           <div class="bar"><span style={`width:${p.pct}%`}></span></div>
@@ -92,6 +97,14 @@ const all = progress(catalog.flatMap((s) => s.cards), owned);
   <section class="print-only">
     <h1>Faltantes — Master set Siniestros</h1>
     <p>Me faltan {all.total - all.owned} de {all.total} cartas.</p>
+    {catalog.some((set) => !sleeves.has(set.id)) && (
+      <div class="print-set">
+        <h2>Sleeves ETB <span>({catalog.filter((set) => !sleeves.has(set.id)).length})</span></h2>
+        <ul>
+          {catalog.filter((set) => !sleeves.has(set.id)).map((set) => <li>{set.name}</li>)}
+        </ul>
+      </div>
+    )}
     {catalog.map((set) => {
       const missing = set.cards.filter((c) => !owned.has(c.id));
       return missing.length > 0 && (
