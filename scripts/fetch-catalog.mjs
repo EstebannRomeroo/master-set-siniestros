@@ -2,7 +2,7 @@
 // Builds src/data/catalog.json: every Darkness-type Pokémon card numbered
 // within the official set count (no secret rares above the set total, no
 // reverse holos), for each set from Prismatic Evolutions to 30th Celebration.
-// Source: TCGdex API (https://tcgdex.dev). Spanish names when available.
+// Source: TCGdex API (https://tcgdex.dev). English set names, Spanish card names when available.
 //
 // Usage: npm run catalog   (re-run when a new set should be added to SETS)
 
@@ -42,7 +42,7 @@ for (const id of SETS) {
       name: esNames.get(c.id) ?? c.name,
       img: `${c.image}/low.webp`,
     }));
-  sets.push({ id, name: es?.name ?? set.name, official, releaseDate: set.releaseDate, cards });
+  sets.push({ id, name: set.name, official, releaseDate: set.releaseDate, cards });
   console.log(`${id.padEnd(8)} ${String(cards.length).padStart(3)} cartas  ${set.name}`);
 }
 
