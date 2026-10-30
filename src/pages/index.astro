@@ -125,8 +125,10 @@ const all = progress(catalog.flatMap((s) => s.cards), owned);
     {catalog.some((set) => !sleeves.has(set.id)) && (
       <div class="print-set">
         <h2>Sleeves ETB <span>({catalog.filter((set) => !sleeves.has(set.id)).length})</span></h2>
-        <ul>
-          {catalog.filter((set) => !sleeves.has(set.id)).map((set) => <li>{set.name}</li>)}
+        <ul class="print-cards">
+          {catalog.filter((set) => !sleeves.has(set.id)).map((set) => (
+            <li>{SLEEVE_IMGS[set.id] && <img src={`${base}sleeves/${SLEEVE_IMGS[set.id][0]}`} alt="" />}{set.name}</li>
+          ))}
         </ul>
       </div>
     )}
