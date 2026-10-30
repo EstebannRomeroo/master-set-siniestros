@@ -135,8 +135,8 @@ const all = progress(catalog.flatMap((s) => s.cards), owned);
       return missing.length > 0 && (
         <div class="print-set">
           <h2>{set.name} <span>({missing.length})</span></h2>
-          <ul>
-            {missing.map((c) => <li><span class="mono">#{c.num}/{set.official}</span> {c.name}</li>)}
+          <ul class="print-cards">
+            {missing.map((c) => <li><img src={c.img} alt="" /><span class="mono">#{c.num}/{set.official}</span> {c.name}</li>)}
           </ul>
         </div>
       );

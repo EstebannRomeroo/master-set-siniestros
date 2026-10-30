@@ -267,4 +267,9 @@ footer a{color:var(--ink-2)}
   .print-only li { padding: 1pt 0; break-inside: avoid; }
   .print-only li::before { content: "☐ "; }
   .print-set { break-inside: avoid-page; }
+  /* No loading="lazy" on these images: they sit in a display:none section, so lazy ones would never load before print. */
+  .print-only ul.print-cards { columns: auto; display: grid; grid-template-columns: repeat(5, 1fr); gap: 6pt; }
+  .print-cards li { font-size: 8pt; text-align: center; }
+  .print-cards li::before { content: none; }
+  .print-cards img { display: block; width: 100%; aspect-ratio: 63 / 88; object-fit: contain; margin-bottom: 2pt; }
 }
