@@ -7,7 +7,7 @@ import { progress, type CardSet } from "../lib/progress";
 
 const catalog = catalogJson as CardSet[];
 const owned = new Set<string>(tengoJson as string[]);
-// Set ids whose Elite Trainer Box sleeves I own.
+// Sleeve photo filenames (public/sleeves) for the Elite Trainer Box sleeves I own.
 const sleeves = new Set<string>(sleevesJson as string[]);
 // ETB sleeve photos in public/sleeves (sourced from GameStop, Bulbagarden, retailers).
 // Prismatic, Journey Together, Mega Evolution, Black Bolt, Chaos Rising and 30th are my own photos.
@@ -20,6 +20,9 @@ const SLEEVE_IMGS: Record<string, string[]> = {
 };
 const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
 const all = progress(catalog.flatMap((s) => s.cards), owned);
+const sleeveFiles = catalog.flatMap((set) => (SLEEVE_IMGS[set.id] ?? []).map((f) => ({ set, f })));
+const missingSleeves = sleeveFiles.filter(({ f }) => !sleeves.has(f));
+const setHasSleeves = (id: string) => (SLEEVE_IMGS[id] ?? []).every((f) => sleeves.has(f));
 ---
 
 <BaseLayout>
@@ -32,7 +35,7 @@ const all = progress(catalog.flatMap((s) => s.cards), owned);
       <div class="tally">
         <div class="tally-item"><span class="tally-n mono">{all.owned}/{all.total}</span><span class="tally-l">Cartas</span></div>
         <div class="tally-item"><span class="tally-n mono">{all.pct}%</span><span class="tally-l">Completado</span></div>
-        <div class="tally-item"><span class="tally-n mono">{sleeves.size}/{catalog.length}</span><span class="tally-l">Sleeves ETB</span></div>
+        <div class="tally-item"><span class="tally-n mono">{sleeveFiles.length - missingSleeves.length}/{sleeveFiles.length}</span><span class="tally-l">Sleeves ETB</span></div>
       </div>
       <div class="head-actions">
         <button class="btn" id="pdfBtn" title="Abre imprimir: elige «Guardar como PDF»">Descargar PDF de faltantes</button>
@@ -73,13 +76,13 @@ const all = progress(catalog.flatMap((s) => s.cards), owned);
         <section class="set" data-set={set.id}>
           <div class="set-head">
             <h2>{set.name}</h2>
-            <span class:list={["sleeve", { owned: sleeves.has(set.id) }]}>{sleeves.has(set.id) ? "✓ Sleeve ETB" : "Falta sleeve ETB"}</span>
+            <span class:list={["sleeve", { owned: setHasSleeves(set.id) }]}>{setHasSleeves(set.id) ? "✓ Sleeve ETB" : "Falta sleeve ETB"}</span>
             <span class="mono set-count">{p.owned}/{p.total}</span>
           </div>
           <div class="bar"><span style={`width:${p.pct}%`}></span></div>
           <ul class="grid">
             {(SLEEVE_IMGS[set.id] ?? []).map((f) => {
-              const has = sleeves.has(set.id);
+              const has = sleeves.has(f);
               return (
                 <li class:list={["card", "sleeve-card", { owned: has }]} data-num="" data-name="Sleeve ETB" data-owned={has ? "1" : ""}>
                   <a class="thumb" href={`${base}sleeves/${f}`} target="_blank" rel="noopener">
@@ -122,12 +125,12 @@ const all = progress(catalog.flatMap((s) => s.cards), owned);
   <section class="print-only">
     <h1>Faltantes — Master set Siniestros</h1>
     <p>Me faltan {all.total - all.owned} de {all.total} cartas.</p>
-    {catalog.some((set) => !sleeves.has(set.id)) && (
+    {missingSleeves.length > 0 && (
       <div class="print-set">
-        <h2>Sleeves ETB <span>({catalog.filter((set) => !sleeves.has(set.id)).length})</span></h2>
+        <h2>Sleeves ETB <span>({missingSleeves.length})</span></h2>
         <ul class="print-cards">
-          {catalog.filter((set) => !sleeves.has(set.id)).map((set) => (
-            <li>{SLEEVE_IMGS[set.id] && <img src={`${base}sleeves/${SLEEVE_IMGS[set.id][0]}`} alt="" />}{set.name}</li>
+          {missingSleeves.map(({ set, f }) => (
+            <li><img src={`${base}sleeves/${f}`} alt="" />{set.name}</li>
           ))}
         </ul>
       </div>
