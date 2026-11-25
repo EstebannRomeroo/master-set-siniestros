@@ -8,7 +8,7 @@
 //
 // Usage: npm run catalog   (re-run when a new set should be added to SETS)
 
-import { writeFileSync } from "node:fs";
+import { existsSync, readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
 const OUT = fileURLToPath(new URL("../src/data/catalog.json", import.meta.url));
@@ -26,6 +26,20 @@ async function get(path) {
   const res = await fetch(`${API}${path}`);
   if (!res.ok) throw new Error(`${res.status} ${path}`);
   return res.json();
+}
+
+const ids = (sets) => sets.flatMap((s) => s.cards.map((c) => c.id));
+
+// Refuses to overwrite a catalog when cards disappear: an incomplete API response looks the same.
+function save(out, sets) {
+  if (existsSync(out)) {
+    const next = new Set(ids(sets));
+    const lost = ids(JSON.parse(readFileSync(out, "utf8"))).filter((id) => !next.has(id));
+    if (lost.length) {
+      throw new Error(`${out} would lose ${lost.length} cards (${lost.join(", ")}). Not saved; delete the file first if this is expected.`);
+    }
+  }
+  writeFileSync(out, JSON.stringify(sets, null, 2) + "\n");
 }
 
 const sets = [];
@@ -49,7 +63,7 @@ for (const id of SETS) {
   console.log(`${id.padEnd(8)} ${String(cards.length).padStart(3)} cartas  ${set.name}`);
 }
 
-writeFileSync(OUT, JSON.stringify(sets, null, 2) + "\n");
+save(OUT, sets);
 console.log(`Total: ${sets.reduce((n, s) => n + s.cards.length, 0)} → ${OUT}`);
 
 // ── Akira Egawa ──────────────────────────────────────────────
@@ -94,5 +108,5 @@ egawaSets.sort((a, b) => a.releaseDate.localeCompare(b.releaseDate) || a.id.loca
 const egawaCards = egawaSets.flatMap((s) => s.cards);
 await mapBatched(egawaCards, (c) => checkImage(c.img));
 
-writeFileSync(EGAWA_OUT, JSON.stringify(egawaSets, null, 2) + "\n");
+save(EGAWA_OUT, egawaSets);
 console.log(`Akira Egawa: ${egawaCards.length} → ${EGAWA_OUT}`);

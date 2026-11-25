@@ -20,7 +20,9 @@ export function applyTengo(catalog, current, ids, remove = false) {
     if (remove) owned.delete(id);
     else owned.add(id);
   }
-  return { owned: order.filter((id) => owned.has(id)), unknown };
+  // Owned ids missing from the catalogs (e.g. an incomplete regeneration) go last, never dropped.
+  const orphans = [...owned].filter((id) => !known.has(id));
+  return { owned: [...order.filter((id) => owned.has(id)), ...orphans], unknown };
 }
 
 if (process.argv[1] === fileURLToPath(import.meta.url)) {

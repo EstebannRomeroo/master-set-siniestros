@@ -30,3 +30,9 @@ test("overlapping catalogs keep each owned id once and drop none", () => {
   const removed = applyTengo([...catalog, ...other], added.owned, ["s1-001"], true);
   assert.deepEqual(removed.owned, current);
 });
+
+test("keeps owned ids that no catalog knows", () => {
+  const r = applyTengo(catalog, ["gone-1", "s2-010"], ["s1-001"]);
+  assert.deepEqual(r.owned, ["s1-001", "s2-010", "gone-1"]);
+  assert.deepEqual(applyTengo(catalog, ["gone-1", "s2-010"], ["s2-010"], true).owned, ["gone-1"]);
+});
