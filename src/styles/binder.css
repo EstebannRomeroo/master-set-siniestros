@@ -91,6 +91,8 @@ button,input,select{font:inherit;color:inherit}
   display:flex;flex-wrap:wrap;align-items:flex-end;gap:20px 28px;
 }
 .brand{flex:1 1 320px;min-width:0}
+.collections{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.collections .chip{text-decoration:none}
 .eyebrow{
   font-family:"IBM Plex Mono",monospace;font-size:.6875rem;font-weight:600;
   letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin:0 0 8px;
@@ -166,7 +168,7 @@ select.sort{
   transition:border-color .14s ease,background .14s ease,color .14s ease;
 }
 .chip:hover{border-color:var(--muted);color:var(--ink)}
-.chip[aria-pressed="true"]{
+.chip[aria-pressed="true"],.chip[aria-current="page"]{
   background:var(--surface-3);color:var(--ink);border-color:var(--ink-2);font-weight:600;
 }
 /* ── Rejilla ──────────────────────────────────────────────── */

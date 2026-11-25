@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { matches, progress, type Card } from "../src/lib/progress.ts";
+import { cardCode, matches, progress, type Card } from "../src/lib/progress.ts";
 
 const cards: Card[] = [
   { id: "a-001", num: "001", name: "Umbreon", img: "" },
@@ -23,4 +23,21 @@ test("matches filters by status, name and number", () => {
   assert.equal(matches(card, "#059", "all"), true);
   assert.equal(matches(card, "5", "all"), false);
   assert.equal(matches({ ...card, name: "Pokémon" }, "pokemon", "all"), true);
+});
+
+test("matches finds non-numeric card numbers", () => {
+  const card = { num: "TG05", name: "Pikachu", owned: false };
+  assert.equal(matches(card, "TG05", "all"), true);
+  assert.equal(matches(card, "#tg05", "all"), true);
+  assert.equal(matches(card, "TG0", "all"), false);
+  assert.equal(matches(card, "5", "all"), false);
+  // Sleeve cards have no number.
+  assert.equal(matches({ ...card, num: "" }, "TG05", "all"), false);
+});
+
+test("cardCode shows the set total only for numeric, non-promo numbers", () => {
+  const set = { name: "Brilliant Stars", official: 172 };
+  assert.equal(cardCode(set, "020"), "#020/172");
+  assert.equal(cardCode(set, "TG05"), "#TG05");
+  assert.equal(cardCode({ name: "SVP Black Star Promos", official: 225 }, "112"), "#112");
 });

@@ -1,17 +1,51 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import catalogJson from "../data/catalog.json";
+import egawaJson from "../data/akira-egawa.json";
 import tengoJson from "../data/tengo.json";
 import sleevesJson from "../data/sleeves.json";
-import { progress, type CardSet } from "../lib/progress";
+import { cardCode, progress, type CardSet } from "../lib/progress";
 
-const catalog = catalogJson as CardSet[];
+// One page per collection; both share the same markup and tengo.json.
+export function getStaticPaths() {
+  return [
+    {
+      params: { page: undefined },
+      props: {
+        catalog: catalogJson as CardSet[],
+        heading: "Master set Siniestros",
+        eyebrow: "Pokémon TCG · Tipo Oscuridad",
+        credits: "TCGdex",
+      },
+    },
+    {
+      params: { page: "akira-egawa" },
+      props: {
+        catalog: egawaJson as CardSet[],
+        heading: "Colección Akira Egawa",
+        eyebrow: "Pokémon TCG · Ilustraciones de Akira Egawa",
+        credits: "TCGdex y Pokémon TCG API",
+        title: "Colección Akira Egawa — Pokémon TCG",
+        description: "Seguimiento personal de las cartas de Pokémon TCG ilustradas por Akira Egawa.",
+      },
+    },
+  ];
+}
+
+const { page } = Astro.params;
+const { catalog, heading, eyebrow, credits, title, description } = Astro.props;
+const nav = [
+  { page: undefined, label: "Siniestros" },
+  { page: "akira-egawa", label: "Akira Egawa" },
+];
+// ETB sleeves are tracked only in the Siniestros master set.
+const hasSleeves = page === undefined;
 const owned = new Set<string>(tengoJson as string[]);
 // Sleeve photo filenames (public/sleeves) for the Elite Trainer Box sleeves I own.
 const sleeves = new Set<string>(sleevesJson as string[]);
 // ETB sleeve photos in public/sleeves (sourced from GameStop, Bulbagarden, retailers).
 // Prismatic, Journey Together, Mega Evolution, Black Bolt, Chaos Rising and 30th are my own photos.
-const SLEEVE_IMGS: Record<string, string[]> = {
+const SLEEVE_IMGS: Record<string, string[]> = !hasSleeves ? {} : {
   "sv08.5": ["sv08.5.jpg"], sv09: ["sv09.jpg"], sv10: ["sv10.webp"],
   "sv10.5w": ["sv10.5w.webp"], "sv10.5b": ["sv10.5b.jpg"],
   me01: ["me01-lucario.jpg", "me01-gardevoir.jpg"], me02: ["me02.webp"],
@@ -26,17 +60,22 @@ const missingSleeves = sleeveFiles.filter(({ f }) => !sleeves.has(f));
 const setHasSleeves = (id: string) => SLEEVE_IMGS[id]?.every((f) => sleeves.has(f)) ?? false;
 ---
 
-<BaseLayout>
+<BaseLayout title={title} description={description}>
   <header class="masthead">
     <div class="masthead-in">
       <div class="brand">
-        <p class="eyebrow">Pokémon TCG · Tipo Oscuridad</p>
-        <h1>Master set Siniestros</h1>
+        <nav class="collections" aria-label="Colecciones">
+          {nav.map((n) => (
+            <a class="chip" href={n.page ? `${base}${n.page}/` : base} aria-current={n.page === page ? "page" : undefined}>{n.label}</a>
+          ))}
+        </nav>
+        <p class="eyebrow">{eyebrow}</p>
+        <h1>{heading}</h1>
       </div>
       <div class="tally">
         <div class="tally-item"><span class="tally-n mono">{all.owned}/{all.total}</span><span class="tally-l">Cartas</span></div>
         <div class="tally-item"><span class="tally-n mono">{all.pct}%</span><span class="tally-l">Completado</span></div>
-        <div class="tally-item"><span class="tally-n mono">{sleeveFiles.length - missingSleeves.length}/{sleeveFiles.length}</span><span class="tally-l">Sleeves ETB</span></div>
+        {hasSleeves && <div class="tally-item"><span class="tally-n mono">{sleeveFiles.length - missingSleeves.length}/{sleeveFiles.length}</span><span class="tally-l">Sleeves ETB</span></div>}
       </div>
       <div class="head-actions">
         <button class="btn" id="pdfBtn" title="Abre imprimir: elige «Guardar como PDF»">Descargar PDF de faltantes</button>
@@ -77,7 +116,7 @@ const setHasSleeves = (id: string) => SLEEVE_IMGS[id]?.every((f) => sleeves.has(
         <section class="set" data-set={set.id}>
           <div class="set-head">
             <h2>{set.name}</h2>
-            <span class:list={["sleeve", { owned: setHasSleeves(set.id) }]}>{setHasSleeves(set.id) ? "✓ Sleeve ETB" : "Falta sleeve ETB"}</span>
+            {hasSleeves && <span class:list={["sleeve", { owned: setHasSleeves(set.id) }]}>{setHasSleeves(set.id) ? "✓ Sleeve ETB" : "Falta sleeve ETB"}</span>}
             <span class="mono set-count">{p.owned}/{p.total}</span>
           </div>
           <div class="bar"><span style={`width:${p.pct}%`}></span></div>
@@ -106,7 +145,7 @@ const setHasSleeves = (id: string) => SLEEVE_IMGS[id]?.every((f) => sleeves.has(
                     {has && <span class="check" aria-label="La tengo">✓</span>}
                   </div>
                   <div class="meta">
-                    <span class="code">#{c.num}/{set.official}</span>
+                    <span class="code">{cardCode(set, c.num)}</span>
                     <span class="name">{c.name}</span>
                   </div>
                 </li>
@@ -124,7 +163,7 @@ const setHasSleeves = (id: string) => SLEEVE_IMGS[id]?.every((f) => sleeves.has(
 
   <!-- ponytail: print-only list + window.print(); browser "Save as PDF" does the rest, no PDF lib -->
   <section class="print-only">
-    <h1>Faltantes — Master set Siniestros</h1>
+    <h1>Faltantes — {heading}</h1>
     <p>Me faltan {all.total - all.owned} de {all.total} cartas.</p>
     {missingSleeves.length > 0 && (
       <div class="print-set">
@@ -142,7 +181,7 @@ const setHasSleeves = (id: string) => SLEEVE_IMGS[id]?.every((f) => sleeves.has(
         <div class="print-set">
           <h2>{set.name} <span>({missing.length})</span></h2>
           <ul class="print-cards">
-            {missing.map((c) => <li><img src={c.img} alt="" /><span class="mono">#{c.num}/{set.official}</span> {c.name}</li>)}
+            {missing.map((c) => <li><img src={c.img} alt="" /><span class="mono">{cardCode(set, c.num)}</span> {c.name}</li>)}
           </ul>
         </div>
       );
@@ -150,7 +189,7 @@ const setHasSleeves = (id: string) => SLEEVE_IMGS[id]?.every((f) => sleeves.has(
   </section>
 
   <footer>
-    <p>Imágenes y datos: TCGdex · © Pokémon / Nintendo / Creatures / GAME FREAK</p>
+    <p>Imágenes y datos: {credits} · © Pokémon / Nintendo / Creatures / GAME FREAK</p>
   </footer>
 
   <script src="../scripts/checklist.ts"></script>

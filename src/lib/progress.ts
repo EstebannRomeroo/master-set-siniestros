@@ -31,7 +31,12 @@ export function normalize(s: string): string {
   return s.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().trim();
 }
 
-// Query matches name or number ("59" matches "059", "#059" too).
+// "#020/172", or just the number when the set total does not apply (galleries, promos).
+export function cardCode(set: Pick<CardSet, "name" | "official">, num: string): string {
+  return /^\d+$/.test(num) && !/\bPromos$/.test(set.name) ? `#${num}/${set.official}` : `#${num}`;
+}
+
+// Query matches name or number ("59" matches "059", "#059" too; "tg05" matches "TG05").
 export function matches(
   card: { num: string; name: string; owned: boolean },
   query: string,
@@ -41,6 +46,6 @@ export function matches(
   if (status === "missing" && card.owned) return false;
   const q = normalize(query).replace(/^#/, "");
   if (!q) return true;
-  if (normalize(card.name).includes(q)) return true;
+  if (normalize(card.name).includes(q) || normalize(card.num) === q) return true;
   return /^\d+$/.test(q) && Number(card.num) === Number(q);
 }
