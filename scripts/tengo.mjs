@@ -4,11 +4,14 @@
 import { readFileSync, writeFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
-const CATALOG = new URL("../src/data/catalog.json", import.meta.url);
+const CATALOGS = ["catalog", "akira-egawa"].map((n) => new URL(`../src/data/${n}.json`, import.meta.url));
 const TENGO = new URL("../src/data/tengo.json", import.meta.url);
 
+const cardIds = (catalog) => [...new Set(catalog.flatMap((s) => s.cards.map((c) => c.id)))];
+
 export function applyTengo(catalog, current, ids, remove = false) {
-  const order = catalog.flatMap((s) => s.cards.map((c) => c.id));
+  // Collections share cards, so the same id can appear more than once.
+  const order = cardIds(catalog);
   const known = new Set(order);
   const unknown = ids.filter((id) => !known.has(id));
   const owned = new Set(current);
@@ -28,12 +31,11 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
     console.error("Uso: npm run tengo -- [--quitar] <id> [<id>...]");
     process.exit(1);
   }
-  const catalog = JSON.parse(readFileSync(CATALOG, "utf8"));
+  const catalog = CATALOGS.flatMap((url) => JSON.parse(readFileSync(url, "utf8")));
   const current = JSON.parse(readFileSync(TENGO, "utf8"));
   const { owned, unknown } = applyTengo(catalog, current, ids, remove);
   writeFileSync(TENGO, JSON.stringify(owned, null, 2) + "\n");
   if (unknown.length) console.warn(`IDs desconocidos (ignorados): ${unknown.join(", ")}`);
-  const total = catalog.reduce((n, s) => n + s.cards.length, 0);
-  console.log(`${remove ? "Quitadas" : "Añadidas"}: ${ids.length - unknown.length} · Tengo ${owned.length}/${total}`);
+  console.log(`${remove ? "Quitadas" : "Añadidas"}: ${ids.length - unknown.length} · Tengo ${owned.length}/${cardIds(catalog).length} cartas únicas`);
   if (unknown.length) process.exitCode = 1;
 }

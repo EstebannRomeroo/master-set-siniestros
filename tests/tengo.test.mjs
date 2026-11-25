@@ -21,3 +21,12 @@ test("reports unknown ids and does not write them", () => {
   const r = applyTengo(catalog, [], ["s1-001", "nope-1"]);
   assert.deepEqual(r, { owned: ["s1-001"], unknown: ["nope-1"] });
 });
+
+test("overlapping catalogs keep each owned id once and drop none", () => {
+  const other = [{ id: "s2", cards: [{ id: "s2-010" }, { id: "s2-020" }] }];
+  const current = ["s2-010", "s2-020"];
+  const added = applyTengo([...catalog, ...other], current, ["s1-001"]);
+  assert.deepEqual(added, { owned: ["s1-001", "s2-010", "s2-020"], unknown: [] });
+  const removed = applyTengo([...catalog, ...other], added.owned, ["s1-001"], true);
+  assert.deepEqual(removed.owned, current);
+});
