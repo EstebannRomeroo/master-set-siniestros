@@ -5,7 +5,7 @@ Oscuridad de Pokémon TCG: qué cartas tengo y cuáles me faltan, por expansión
 
 ## Alcance
 
-- Pokémon de tipo Oscuridad, desde Evoluciones Prismáticas (sv08.5) hasta 30th Celebration.
+- Pokémon de tipo Oscuridad, desde Evoluciones Prismáticas (sv08.5) hasta Delta Reign.
 - Solo cartas numeradas dentro del total oficial de cada set (sin secretas por encima
   del total, sin reverse holo).
 

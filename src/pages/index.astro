@@ -22,7 +22,8 @@ const base = import.meta.env.BASE_URL.replace(/\/?$/, "/");
 const all = progress(catalog.flatMap((s) => s.cards), owned);
 const sleeveFiles = catalog.flatMap((set) => (SLEEVE_IMGS[set.id] ?? []).map((f) => ({ set, f })));
 const missingSleeves = sleeveFiles.filter(({ f }) => !sleeves.has(f));
-const setHasSleeves = (id: string) => (SLEEVE_IMGS[id] ?? []).every((f) => sleeves.has(f));
+// A set without sleeve photos yet counts as missing ([].every() is true).
+const setHasSleeves = (id: string) => SLEEVE_IMGS[id]?.every((f) => sleeves.has(f)) ?? false;
 ---
 
 <BaseLayout>

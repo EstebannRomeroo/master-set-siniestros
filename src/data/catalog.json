@@ -1012,5 +1012,115 @@
         "img": "https://assets.tcgdex.net/en/me/30th/100/low.webp"
       }
     ]
+  },
+  {
+    "id": "me06",
+    "name": "Delta Reign",
+    "official": 103,
+    "releaseDate": "2026-11-06",
+    "cards": [
+      {
+        "id": "me06-055",
+        "num": "055",
+        "name": "Nidoran♀",
+        "img": "https://assets.tcgdex.net/en/me/me06/055/low.webp"
+      },
+      {
+        "id": "me06-056",
+        "num": "056",
+        "name": "Nidorina",
+        "img": "https://assets.tcgdex.net/en/me/me06/056/low.webp"
+      },
+      {
+        "id": "me06-057",
+        "num": "057",
+        "name": "Nidoqueen",
+        "img": "https://assets.tcgdex.net/en/me/me06/057/low.webp"
+      },
+      {
+        "id": "me06-058",
+        "num": "058",
+        "name": "Spinarak",
+        "img": "https://assets.tcgdex.net/en/me/me06/058/low.webp"
+      },
+      {
+        "id": "me06-059",
+        "num": "059",
+        "name": "Ariados",
+        "img": "https://assets.tcgdex.net/en/me/me06/059/low.webp"
+      },
+      {
+        "id": "me06-060",
+        "num": "060",
+        "name": "Sableye",
+        "img": "https://assets.tcgdex.net/en/me/me06/060/low.webp"
+      },
+      {
+        "id": "me06-061",
+        "num": "061",
+        "name": "Carvanha",
+        "img": "https://assets.tcgdex.net/en/me/me06/061/low.webp"
+      },
+      {
+        "id": "me06-062",
+        "num": "062",
+        "name": "Sharpedo",
+        "img": "https://assets.tcgdex.net/en/me/me06/062/low.webp"
+      },
+      {
+        "id": "me06-063",
+        "num": "063",
+        "name": "Darkrai",
+        "img": "https://assets.tcgdex.net/en/me/me06/063/low.webp"
+      },
+      {
+        "id": "me06-064",
+        "num": "064",
+        "name": "Purrloin",
+        "img": "https://assets.tcgdex.net/en/me/me06/064/low.webp"
+      },
+      {
+        "id": "me06-065",
+        "num": "065",
+        "name": "Liepard",
+        "img": "https://assets.tcgdex.net/en/me/me06/065/low.webp"
+      },
+      {
+        "id": "me06-066",
+        "num": "066",
+        "name": "Zorua",
+        "img": "https://assets.tcgdex.net/en/me/me06/066/low.webp"
+      },
+      {
+        "id": "me06-067",
+        "num": "067",
+        "name": "Zoroark ex",
+        "img": "https://assets.tcgdex.net/en/me/me06/067/low.webp"
+      },
+      {
+        "id": "me06-068",
+        "num": "068",
+        "name": "Inkay",
+        "img": "https://assets.tcgdex.net/en/me/me06/068/low.webp"
+      },
+      {
+        "id": "me06-069",
+        "num": "069",
+        "name": "Mega-Malamar ex",
+        "img": "https://assets.tcgdex.net/en/me/me06/069/low.webp"
+      },
+      {
+        "id": "me06-070",
+        "num": "070",
+        "name": "Morpeko",
+        "img": "https://assets.tcgdex.net/en/me/me06/070/low.webp"
+      },
+      {
+        "id": "me06-071",
+        "num": "071",
+        "name": "Zarude",
+        "img": "https://assets.tcgdex.net/en/me/me06/071/low.webp"
+      }
+    ]
   }
 ]

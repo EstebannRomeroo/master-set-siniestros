@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Builds src/data/catalog.json: every Darkness-type Pokémon card numbered
 // within the official set count (no secret rares above the set total, no
-// reverse holos), for each set from Prismatic Evolutions to 30th Celebration.
+// reverse holos), for each set from Prismatic Evolutions to Delta Reign.
 // Source: TCGdex API (https://tcgdex.dev). English set names, Spanish card names when available.
 //
 // Usage: npm run catalog   (re-run when a new set should be added to SETS)
@@ -16,7 +16,7 @@ const API = "https://api.tcgdex.net/v2";
 // 30th Classic Collection (reprints with no official count) are excluded.
 const SETS = [
   "sv08.5", "sv09", "sv10", "sv10.5w", "sv10.5b",
-  "me01", "me02", "me02.5", "me03", "me04", "me05", "30th",
+  "me01", "me02", "me02.5", "me03", "me04", "me05", "30th", "me06",
 ];
 
 async function get(path) {
